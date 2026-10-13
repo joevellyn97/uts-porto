@@ -1,0 +1,222 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Tentang | Berkas Portofolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Gaegu:wght@400;700&family=Quicksand:wght@400;500;600;700&family=Special+Elite&display=swap"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script>
+      (function () {
+        var r = document.documentElement;
+        try {
+          var t = localStorage.getItem("berkas-theme");
+          if (t) r.setAttribute("data-theme", t);
+          if (sessionStorage.getItem("berkas-intro"))
+            r.classList.add("no-intro");
+        } catch (e) {}
+      })();
+    </script>
+  </head>
+  <body>
+    <div class="wrap">
+      <header class="deck" id="deck">
+        <div class="ctl">
+          <button type="button" id="prev" aria-label="Lagu sebelumnya">
+            <svg viewBox="0 0 16 16">
+              <path d="M3 2h2v12H3zM14 2v12L6 8z" />
+            </svg>
+          </button>
+          <button
+            type="button"
+            class="play"
+            id="play"
+            aria-label="Putar musik"
+            aria-pressed="false"
+          >
+            <svg viewBox="0 0 16 16" id="ico-play">
+              <path d="M4 2l10 6-10 6z" />
+            </svg>
+            <svg viewBox="0 0 16 16" id="ico-pause" hidden>
+              <path d="M3 2h4v12H3zM9 2h4v12H9z" />
+            </svg>
+          </button>
+          <button type="button" id="next" aria-label="Lagu berikutnya">
+            <svg viewBox="0 0 16 16">
+              <path d="M11 2h2v12h-2zM2 2l8 6-8 6z" />
+            </svg>
+          </button>
+        </div>
+        <div class="track">
+          <span class="eq" aria-hidden="true"><i></i><i></i><i></i></span>
+          <span class="track-name" id="track-name">Rainy Window Tape</span>
+        </div>
+        <div class="dots" id="dots" aria-hidden="true"></div>
+        <span class="hello">🍓˖ ་</span>
+        <span class="clock" id="clock" aria-label="Jam sekarang">--.--</span>
+        <button
+          type="button"
+          class="theme"
+          id="theme"
+          aria-label="Ganti tema terang atau gelap"
+        >
+          <svg viewBox="0 0 16 16">
+            <circle
+              cx="8"
+              cy="8"
+              r="6"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.8"
+            />
+            <path d="M8 2a6 6 0 0 0 0 12z" fill="currentColor" />
+          </svg>
+        </button>
+      </header>
+
+      <div class="stage">
+        <main class="folder">
+          <nav class="tabs" aria-label="Halaman">
+            <a class="tab" href="index.html">Home</a>
+            <a class="tab" href="about.html" aria-current="page">About</a>
+            <a class="tab" href="contact.html">Contact</a>
+          </nav>
+
+          <div class="sheet">
+            <img
+              class="clip for-light"
+              src="image/clip_pink.png"
+              alt="light clip"
+            />
+            <img
+              class="clip for-dark"
+              src="image/clip_blue.png"
+              alt="dark clip"
+            />
+
+            <div class="layout">
+              <nav class="side" aria-label="Isi profil">
+                <button
+                  type="button"
+                  class="side-btn"
+                  data-pane="about"
+                  aria-current="true"
+                >
+                  <svg viewBox="0 0 24 24">
+                    <circle cx="12" cy="12" r="9" />
+                    <path d="M8.5 14.5q3.5 3.5 7 0M9 9.5v.5M15 9.5v.5" /></svg
+                  >Tentang
+                </button>
+                <button type="button" class="side-btn" data-pane="education">
+                  <svg viewBox="0 0 24 24">
+                    <path d="M2 9l10-5 10 5-10 5z" />
+                    <path d="M6 11.5V16q6 4 12 0v-4.5" /></svg
+                  >Education
+                  </button>
+                <button type="button" class="side-btn" data-pane="skills">
+                  <svg viewBox="0 0 24 24">
+                    <rect x="4" y="3" width="16" height="18" rx="2" />
+                    <path d="M8 8h8M8 12h8M8 16h5" /></svg
+                  >Skills
+                  </button>
+                <button
+                  type="button"
+                  class="side-btn"
+                  data-pane="Achievements"
+                >
+                  <svg viewBox="0 0 24 24">
+                    <circle cx="12" cy="9" r="6" />
+                    <path d="M8.5 14L7 22l5-3 5 3-1.5-8" /></svg
+                  >Achievements
+                </button>
+              </nav>
+
+              <div class="card">
+                <article class="pane" data-pane="about">
+                  <h2 class="h2">About</h2>
+                  <p class="sub">a little about me.</p>
+                  <div class="prose">
+                    <p>
+                      Hello, i'm <span data-name>Amel</span>, third-semester
+                      college student who started learning web design by
+                      tinkering with my own blog. From there, I developed a
+                      passion for creating things to bring my ideas to life.
+                    </p>
+                    <p>
+                      When I'm not coding, I like to watch movies and listen to
+                      music while working on assignments.
+                    </p>
+                  </div>
+                  <div class="group">
+                    <h3>Currently being studied</h3>
+                    <div class="chips">
+                      <span class="chip">Java Script</span
+                      ><span class="chip">Unity</span
+                      ><span class="chip">Godot Engine</span>
+                    </div>
+                  </div>
+                </article>
+
+                <article class="pane" data-pane="education" hidden>
+                  <h2 class="h2">Education</h2>
+                  <ul class="list">
+                    <li class="row">
+                      <strong>Universitas Negeri Surabaya</strong
+                      ><span class="meta">2025 till now</span>
+                      <p>
+                        D4 Informatics Manajement. Focus on web development and cybersecurity.
+                      </p>
+                    </li>
+                    <li class="row">
+                      <strong>SMA Antartika Sidoarjo</strong
+                      ><span class="meta">2022 - 2025</span>
+                      <p>Social Studies track. Member of taekwondo club.</p>
+                    </li>
+                  </ul>
+                </article>
+
+                <article class="pane" data-pane="skills" hidden>
+                  <h2 class="h2">Skills</h2>
+                  <p class="sub">The most commonly used tool.</p>
+                  <div class="groups">
+                    <div class="group">
+                      <h3>Frontend</h3>
+                      <div class="chips">
+                        <span class="chip">HTML</span
+                        ><span class="chip">CSS</span
+                        ><span class="chip">JavaScript</span
+                      </div>
+                    </div>
+                  </div>
+                </article>
+                <article class="pane" data-pane="Achievements" hidden>
+                  <h2 class="h2">Achievements</h2>
+                    <li class="row">
+                      <strong>1st Place in F-Kyorugi Group 065 Taekwondo UNESA Rector’s Cup</strong
+                      ><span class="meta">2024</span>
+                      <p>UNESA</p>
+                    </li>
+                    <li class="row">
+                      <strong>2nd Place in F-Kyorugi KBPP POLRI East Java Taekwondo Cup</strong
+                      ><span class="meta">2023</span>
+                      <p>KONI EAST JAVA</p>
+                    </li>
+                  </ul>
+                </article>
+              </div>
+            </div>
+          </div>
+        </main>
+      </div>
+
+      <p class="note">© 2026 Sayyidah Farah Amellia</p>
+    </div>
+
+    <script src="main.js"></script>
+  </body>
+</html>

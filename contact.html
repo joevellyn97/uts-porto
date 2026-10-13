@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Kontak | Berkas Portofolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Gaegu:wght@400;700&family=Quicksand:wght@400;500;600;700&family=Special+Elite&display=swap"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script>
+      (function () {
+        var r = document.documentElement;
+        try {
+          var t = localStorage.getItem("berkas-theme");
+          if (t) r.setAttribute("data-theme", t);
+          if (sessionStorage.getItem("berkas-intro"))
+            r.classList.add("no-intro");
+        } catch (e) {}
+      })();
+    </script>
+  </head>
+  <body>
+    <div class="wrap">
+      <header class="deck" id="deck">
+        <div class="ctl">
+          <button type="button" id="prev" aria-label="Lagu sebelumnya">
+            <svg viewBox="0 0 16 16">
+              <path d="M3 2h2v12H3zM14 2v12L6 8z" />
+            </svg>
+          </button>
+          <button
+            type="button"
+            class="play"
+            id="play"
+            aria-label="Putar musik"
+            aria-pressed="false"
+          >
+            <svg viewBox="0 0 16 16" id="ico-play">
+              <path d="M4 2l10 6-10 6z" />
+            </svg>
+            <svg viewBox="0 0 16 16" id="ico-pause" hidden>
+              <path d="M3 2h4v12H3zM9 2h4v12H9z" />
+            </svg>
+          </button>
+          <button type="button" id="next" aria-label="Lagu berikutnya">
+            <svg viewBox="0 0 16 16">
+              <path d="M11 2h2v12h-2zM2 2l8 6-8 6z" />
+            </svg>
+          </button>
+        </div>
+        <div class="track">
+          <span class="eq" aria-hidden="true"><i></i><i></i><i></i></span>
+          <span class="track-name" id="track-name">Rainy Window Tape</span>
+        </div>
+        <div class="dots" id="dots" aria-hidden="true"></div>
+        <span class="hello">🍓˖ ་</span>
+        <span class="clock" id="clock" aria-label="Jam sekarang">--.--</span>
+        <button
+          type="button"
+          class="theme"
+          id="theme"
+          aria-label="Ganti tema terang atau gelap"
+        >
+          <svg viewBox="0 0 16 16">
+            <circle
+              cx="8"
+              cy="8"
+              r="6"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.8"
+            />
+            <path d="M8 2a6 6 0 0 0 0 12z" fill="currentColor" />
+          </svg>
+        </button>
+      </header>
+
+      <div class="stage"
+        <main class="folder">
+          <nav class="tabs" aria-label="Halaman">
+            <a class="tab" href="index.html">Home</a>
+            <a class="tab" href="about.html">About</a>
+            <a class="tab" href="contact.html" aria-current="page">Contact</a>
+          </nav>
+
+          <div class="sheet">
+            <img
+              class="clip for-light"
+              src="image/clip_pink.png"
+              alt="light clip"
+            />
+            <img
+              class="clip for-dark"
+              src="image/clip_blue.png"
+              alt="dark clip"
+            />
+
+            <section class="card">
+              <div class="split">
+                <div>
+                  <h1 class="h2">Contact</h1>
+                  <p class="sub">
+                    We welcome both criticism and suggestions
+                  </p>
+                  <div class="contact">
+                    <div class="crow">
+                      <span class="k">Email</span
+                      ><span class="v" id="v-email">25091397035@mhs.unesa.ac.id</span
+                      ><button type="button" class="copy" data-target="v-email">
+                        copy
+                      </button>
+                    </div>
+                    <div class="crow">
+                      <span class="k">GitHub</span
+                      ><span class="v" id="v-gh">github.com/joevellyn97</span
+                      ><button type="button" class="copy" data-target="v-gh">
+                        Copy
+                      </button>
+                    </div>
+                    <div class="crow">
+                      <span class="k">LinkedIn</span
+                      ><span class="v" id="v-in">linkedin.com/in/SayyidahFarahAmellia</span
+                      ><button type="button" class="copy" data-target="v-in">
+                        copy
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <img
+                  class="mascot for-light"
+                  src="image/pink_cat.png"
+                  alt="Kucing pixel pink"
+                />
+                <img
+                  class="mascot for-dark"
+                  src="image/blue_cat.png"
+                  alt="Kucing pixel versi gelap"
+                />
+              </div>
+            </section>
+          </div>
+        </main>
+      </div>
+
+      <p class="note">
+        © 2026 Sayyidah Farah Amellia
+      </p>
+    </div>
+
+    <script src="main.js"></script>
+  </body>
+</html>
